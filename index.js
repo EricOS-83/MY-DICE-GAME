@@ -18,14 +18,17 @@ var image2 = document.querySelectorAll("img")[1];
 
 image2.setAttribute("src",diceImage2);
 
-if (randomNumber1 > randomNumber2){
-    document.querySelector("h2").innerHTML = "Player1 wins";
-}
 
-else if (randomNumber1 < randomNumber2){
-    document.querySelector("h2").innerHTML = "Player2 wins";    
-}
+    if (randomNumber1 > randomNumber2){
+        document.querySelector("h3").innerHTML = "Player1 wins";
+    }
 
-else {
-    document.querySelector("h2").innerHTML = "Draw - Please try again";
-}
+    else if(randomNumber1 < randomNumber2){
+        document.querySelector("h3").innerHTML = "Player2 wins";    
+    }
+
+    else if(randomNumber1 == randomNumber2){
+        document.querySelector("h3").innerHTML = "Draw - Please try again";
+    }
+
+
